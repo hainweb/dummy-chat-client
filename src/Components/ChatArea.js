@@ -32,7 +32,7 @@ function ChatArea() {
     };
     axios
       .post(
-        "http://localhost:8080/message/",
+        "https://dummy-chat-server2.onrender.com/message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -55,7 +55,7 @@ function ChatArea() {
       },
     };
     axios
-      .get("http://localhost:8080/message/" + chat_id, config)
+      .get("https://dummy-chat-server2.onrender.com/message/" + chat_id, config)
       .then(({ data }) => {
         setAllMessages(data);
         setloaded(true);
